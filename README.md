@@ -1,2 +1,0 @@
-# braden.biz
-portfolio website
