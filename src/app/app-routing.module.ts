@@ -1,18 +1,18 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {FreelanceComponent} from './pages/freelance/freelance.component';
-import {HomeComponent} from './pages/home/home.component';
+import {HomeComponent} from './locations/home/home.component';
+import {SandboxComponent} from './locations/sandbox/sandbox.component';
 
 
 const routes: Routes = [
   {
-    path: '', component: HomeComponent
+    path: '', component: SandboxComponent
   },
+  // {
+  //   path: 'sandbox', component: SandboxComponent
+  // },
   {
-    path: 'freelance', component: FreelanceComponent
-  },
-  {
-    path: "**", redirectTo: '', pathMatch: 'full'
+    path: '**', redirectTo: '', pathMatch: 'full'
   }
 ];
 
