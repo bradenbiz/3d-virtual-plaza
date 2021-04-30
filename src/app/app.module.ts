@@ -1,24 +1,30 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { MallDirectoryComponent } from './shared/mall-directory/mall-directory.component';
-import { HomeComponent } from './pages/home/home.component';
-import { FreelanceComponent } from './pages/freelance/freelance.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {HomeComponent} from './locations/home/home.component';
+import {SandboxComponent} from './locations/sandbox/sandbox.component';
+import {MenuComponent} from './shared/menu/menu.component';
+import {MallMapComponent} from './3d-components/mall-map/mall-map.component';
+import {CameraControlsService} from './services/camera-controls.service';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MallDirectoryComponent,
+    MallMapComponent,
     HomeComponent,
-    FreelanceComponent
+    SandboxComponent,
+    MenuComponent,
+    MallMapComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
-  providers: [],
+  providers: [CameraControlsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
